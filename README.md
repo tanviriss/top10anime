@@ -2,7 +2,7 @@
 
 Submitted by: **Tanvir Islam**
 
-This web app: **Recommends users my top 10 anime of all ti,e**
+This web app: **Recommends users my top 10 anime of all time**
 
 Time spent: **3** hours spent in total
 
