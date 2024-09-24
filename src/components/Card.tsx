@@ -1,4 +1,3 @@
-import animeBanner from "../images/anime_banner.jpg";
 
 interface CardProps {
   title: string;
@@ -7,16 +6,18 @@ interface CardProps {
   rating: number;
 }
 
-const Cards: React.FC<CardProps> = ({title, img, link, rating}) => {
+const Cards: React.FC<CardProps> = ({ title, img, link, rating }) => {
   return (
-    <div>
-      <img className="animeBanner" src={animeBanner} alt="anime banner" />
-      <h2 className="titles">{title}</h2>
-      <img className="images" src={img} alt={title} />
-      <p className="ratings">Rating: {rating}</p>
-      <a className="links" href={link} target="_blank">Visit</a>
+    <div className="card">
+      <img className="card-img" src={img} alt={title} />
+      <div className="card-content">
+        <h2 className="card-title">{title}</h2>
+        <p className="card-subtitle">Rating: {rating}</p>
+        <a className="card-button" href={link} target="_blank">View More</a>
+      </div>
     </div>
-  )
-}
+  );
+};
 
 export default Cards;
+

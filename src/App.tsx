@@ -1,4 +1,5 @@
 import Cards from './components/Card'
+import animeBanner from './images/anime_banner.jpg'
 import './App.css'
 import naruto from "./images/naruto.jpg";
 import onePiece from "./images/onePiece.avif";
@@ -84,22 +85,24 @@ function App() {
   ];
   
 
-  return (
-    <div>
-      <div className='cards'>
-        {Animes.map((anime: Anime) => {
-          return (
-            <Cards
-              title={anime.title}
-              img={anime.img}
-              rating={anime.rating}
-              link={anime.link}
-            />
-          )
-        })}
-      </div>
+return (
+  <div className="app">
+    <img className="animeBanner" src={animeBanner} alt="anime banner" />
+    <h1 className="app-title">Top 10 Anime</h1>
+    <div className="cards-container">
+      {Animes.map((anime: Anime) => (
+        <Cards
+          key={anime.title}
+          title={anime.title}
+          img={anime.img}
+          rating={anime.rating}
+          link={anime.link}
+        />
+      ))}
     </div>
-  );
+  </div>
+);
 }
 
-export default App
+export default App;
+
